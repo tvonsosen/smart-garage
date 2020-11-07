@@ -12,10 +12,10 @@ homePage(BuildContext context) {
           Align(
               alignment: Alignment(0, -0.85),
               child: Text('Garage', style: garageTitle)),
-
+// ! garage open/closed button 
           Align(
-              alignment: Alignment.center,
-              child: MaterialButton(
+            alignment: Alignment.center,
+            child: MaterialButton(
                 height: 300,
                 color: Colors.white12,
                 minWidth: 300,
@@ -26,8 +26,19 @@ homePage(BuildContext context) {
                   Text('CLOSED');
                 }),
           ),
-          
-
+          Align(
+            alignment: Alignment(0.925, -0.875),
+            child: IconButton(
+                icon: Icon(Icons.ios_share),
+                iconSize: 65,
+                onPressed: () {
+                  navigateToSharePage(context);
+                }),
+          ),
+          Align(
+            alignment: Alignment(-0.925, -0.875),
+            child: IconButton(iconSize: 65, icon: Icon(Icons.settings)),
+          ),
         ],
       ),
     ),
