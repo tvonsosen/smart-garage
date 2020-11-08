@@ -30,14 +30,14 @@ homePage(BuildContext context) {
             alignment: Alignment(0.925, -0.875),
             child: IconButton(
                 icon: Icon(Icons.ios_share),
-                iconSize: 65,
+                iconSize: 55,
                 onPressed: () {
                   navigateToSharePage(context);
                 }),
           ),
           Align(
             alignment: Alignment(-0.925, -0.875),
-            child: IconButton(iconSize: 65, icon: Icon(Icons.settings)),
+            child: IconButton(iconSize: 55, icon: Icon(Icons.settings)),
           ),
         ],
       ),

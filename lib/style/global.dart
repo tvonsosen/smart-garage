@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 //*  color: Colors.red,
 //*   fontWeight: FontWeight.w800);
 TextStyle garageTitle = TextStyle(
-    fontSize: 60,
+    fontSize: 50,
     fontFamily: 'Roboto',
     color: Colors.deepPurple,
     fontWeight: FontWeight.w900,

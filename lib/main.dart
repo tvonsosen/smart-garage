@@ -19,7 +19,11 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
+
+
 }
+
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -43,16 +47,15 @@ class SharePage extends StatefulWidget {
 }
 
 class _SharePageState extends State<SharePage> {
+  bool isSwitched = false;
+  //* for switch buttons
+  @override
   Widget build(BuildContext context) {
     return Scaffold(body: theSharePage(context));
   }
-
- 
 }
-
 
 Future navigateToSharePage(context) async {
   Navigator.push(context, MaterialPageRoute(builder: (context) => SharePage()));
 }
-
 
