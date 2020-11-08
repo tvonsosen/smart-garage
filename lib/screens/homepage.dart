@@ -37,6 +37,20 @@ homePage(BuildContext context) {
           margin: EdgeInsets.only(top:25),
           child: openButton(2),
         ),
+        Container(
+          height: 300,
+          margin:EdgeInsets.only(top:30, left: 15, right: 15),
+          decoration: BoxDecoration (
+            border: Border.all(color: Colors.black87),
+            ),
+          child: Column(
+            children:[ 
+              Text('Activity Log', style: addButton),
+              garageActivity()
+
+           ]
+          )
+            )
             
           
           

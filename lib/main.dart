@@ -4,7 +4,7 @@ import 'package:smart_garage/screens/homepage.dart';
 import 'package:smart_garage/screens/sharepage.dart';
 import 'package:smart_garage/style/global.dart';
 import 'package:smart_garage/functions/functions.dart';
-
+import 'package:smart_garage/style/pieces.dart';
 void main() {
   runApp(MyApp());
 }
@@ -100,7 +100,7 @@ class _SharePageState extends State<SharePage> {
               ),
             ),
             Container(
-              width: 350,
+              width: 375,
               child: Column(
                 children: [
                   Text('Share Your Garage', style: addButton),
@@ -123,49 +123,49 @@ class _SharePageState extends State<SharePage> {
                     child: Column(
                       children: [
                         
-                      Text('Permission:', style: switchButton),
+                        Text('Permission:', style: switchButton),
 
-                      RadioListTile(
-                          value: 1,
+                        RadioListTile(
+                            value: 1,
+                            groupValue: selectedRadio,
+                            activeColor: Colors.deepPurple,
+                            title: Text("Once"),
+                            onChanged: (val) {
+                              print(val);
+                              setSelectedRadio(val);
+                              //setSelecteedButton(val):
+                            }),
+
+                        RadioListTile(
+                          value: 2,
                           groupValue: selectedRadio,
                           activeColor: Colors.deepPurple,
-                          title: Text("Once"),
+                          title: Text("Forever"),
                           onChanged: (val) {
                             print(val);
                             setSelectedRadio(val);
-                            //setSelecteedButton(val):
-                          }),
+                          },
+                        ),
 
-                      RadioListTile(
-                        value: 2,
-                        groupValue: selectedRadio,
-                        activeColor: Colors.deepPurple,
-                        title: Text("Forever"),
-                        onChanged: (val) {
-                          print(val);
-                          setSelectedRadio(val);
-                        },
-                      ),
+                        Text('Ask for Permission?', style: switchButton),
+                        RadioListTile(
+                            value: 3,
+                            groupValue: selectedRadio2,
+                            activeColor: Colors.deepPurple,
+                            title: Text("No"),
+                            onChanged: (val1) {
+                              print(val1);
+                              setSelectedRadio2(val1);
+                            }),
 
-                      Text('Ask for Permission?', style: switchButton),
-                      RadioListTile(
-                          value: 3,
+                        RadioListTile(
+                          value: 4,
                           groupValue: selectedRadio2,
                           activeColor: Colors.deepPurple,
-                          title: Text("No"),
+                          title: Text("Yes"),
                           onChanged: (val1) {
                             print(val1);
                             setSelectedRadio2(val1);
-                          }),
-
-                      RadioListTile(
-                        value: 4,
-                        groupValue: selectedRadio2,
-                        activeColor: Colors.deepPurple,
-                        title: Text("Yes"),
-                        onChanged: (val1) {
-                          print(val1);
-                          setSelectedRadio2(val1);
                     },
                   ),
                        ], ),
@@ -176,6 +176,19 @@ class _SharePageState extends State<SharePage> {
                       onPressed: () {
                         print("Added");
                       }),
+                  Container(
+                    height: 275,
+                    margin:EdgeInsets.only(top:15),
+                    decoration: BoxDecoration (
+                      border: Border.all(color: Colors.black87),
+                      ),
+                    child: Column(
+                      children:[ 
+                        Text('Shared with:', style: addButton),
+                        shareLog()
+                      ]
+                    )
+                  )
                 ],
               ),
             ),

@@ -102,3 +102,38 @@ garageStatus(int garageStatus){
       ]
     );  }
 }
+garageActivity(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children:[
+        Container(
+          width: 20,
+          height: 20,
+          margin: EdgeInsets.all(10.0),
+          decoration: BoxDecoration(
+            color: Colors.green,
+            shape: BoxShape.circle
+          ),
+        ),
+        Text("3:17 PM - Closed by Trenton", style: currentStatusStyle),
+      ]
+    );
+  }
+
+shareLog(){
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children:[
+        Container(
+          width: 20,
+          height: 20,
+          margin: EdgeInsets.all(10.0),
+          decoration: BoxDecoration(
+            color: Colors.deepPurple,
+            shape: BoxShape.circle
+          ),
+        ),
+        Text("masonhorder@gmail.com", style: currentStatusStyle),
+      ]
+    );
+  }
