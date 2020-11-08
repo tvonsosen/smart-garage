@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:smart_garage/screens/homepage.dart';
-import 'package:smart_garage/screens/sharepage.dart';
 import 'package:smart_garage/style/global.dart';
 import 'package:smart_garage/functions/functions.dart';
 import 'package:smart_garage/style/pieces.dart';
@@ -163,9 +162,10 @@ class _SharePageState extends State<SharePage> {
                       ],
                     ),
                   ),
-                  IconButton(
-                      icon: Icon(Icons.add),
-                      iconSize: 65,
+                  FloatingActionButton(
+                      child: Icon(Icons.add),
+                      
+                      backgroundColor: Colors.deepPurple,
                       onPressed: () {
                         addEmail();
                       }),
