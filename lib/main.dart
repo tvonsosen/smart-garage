@@ -61,11 +61,11 @@ class _SharePageState extends State<SharePage> {
     });
   }
 
- 
 
-  setSelectedRadio2(int val) {
+
+  setSelectedRadio2(int val1) {
     setState(() {
-      selectedRadio = val;
+      selectedRadio2 = val1;
     });
   }
 
@@ -151,26 +151,26 @@ class _SharePageState extends State<SharePage> {
             Align(
               alignment: Alignment(-0.9, -0.07),
               child: RadioListTile(
-                  value: 1,
+                  value: 3,
                   groupValue: selectedRadio2,
                   activeColor: Colors.deepPurple,
                   title: Text("No"),
-                  onChanged: (val) {
-                    print(val);
-                    setSelectedRadio2(val);
+                  onChanged: (val1) {
+                    print(val1);
+                    setSelectedRadio2(val1);
                     //setSelecteedButton(val):
                   }),
             ),
             Align(
               alignment: Alignment(-0.9, 0),
               child: RadioListTile(
-                value: 2,
+                value: 4,
                 groupValue: selectedRadio2,
                 activeColor: Colors.deepPurple,
                 title: Text("Yes"),
-                onChanged: (val) {
-                  print(val);
-                  setSelectedRadio2(val);
+                onChanged: (val1) {
+                  print(val1);
+                  setSelectedRadio2(val1);
                 },
               ),
             ),
