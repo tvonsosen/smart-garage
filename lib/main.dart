@@ -61,8 +61,6 @@ class _SharePageState extends State<SharePage> {
     });
   }
 
-
-
   setSelectedRadio2(int val1) {
     setState(() {
       selectedRadio2 = val1;
@@ -73,110 +71,117 @@ class _SharePageState extends State<SharePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-          child: Align(
-        alignment: Alignment.center,
-        child: Stack(
+        margin: EdgeInsets.only(top: 45),
+        child: Column(
           children: <Widget>[
-            Align(
-                alignment: Alignment(0, -0.85),
-                child: Text('Garage', style: garageTitle)),
-            // * back button
-            Align(
-              alignment: Alignment(-0.91, -0.85),
-              child: IconButton(
-                  icon: Icon(Icons.arrow_back_ios_sharp),
-                  iconSize: 50,
-                  onPressed: () {
-                    Navigator.pop(context);
-                  }),
+            Container(
+              
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  IconButton(
+                      icon: Icon(Icons.arrow_back_ios_sharp),
+                      iconSize: 50,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      }),
+                  Container(
+                    margin: EdgeInsets.only(left: 30, right: 30),
+                    child: Text('Garage', style: garageTitle)),
+                  IconButton(
+                      icon: Icon(Icons.arrow_back_ios_sharp),
+                      color: Colors.white,
+                      iconSize: 50,
+                      onPressed: () {
+                        Navigator.pop(context);
+                      }),
+                  // * back button
+                ],
+              ),
             ),
-            Align(
-                alignment: Alignment(0, -0.68),
-                child: Text('Share Your Garage', style: addButton)),
-            Align(
-              alignment: Alignment(0, -0.55),
-              child: Container(
-                  width: 350,
-                  child: TextField(
+            Container(
+              width: 350,
+              child: Column(
+                children: [
+                  Text('Share Your Garage', style: addButton),
+
+                  TextField(
                       autofocus: true,
                       style: TextStyle(height: 1.5, fontSize: 18),
                       obscureText: false,
                       decoration: InputDecoration(
                         hintText: 'Email to Share',
                         border: OutlineInputBorder(),
-                      ))),
-            ),
-            Align(
-              alignment: Alignment(0, 0.2),
-              child: IconButton(
-                  icon: Icon(Icons.add),
-                  iconSize: 65,
-                  onPressed: () {
-                    print("Added");
-                  }),
-            ),
-            // * Radio buttons and their titles, permission time period/permission to use
-            Align(
-                alignment: Alignment(-0.9, -0.40),
-                child: Text('Permission:', style: switchButton)),
-            Align(
-              alignment: Alignment(-0.9, -0.32),
-              child: RadioListTile(
-                  value: 1,
-                  groupValue: selectedRadio,
-                  activeColor: Colors.deepPurple,
-                  title: Text("Once"),
-                  onChanged: (val) {
-                    print(val);
-                    setSelectedRadio(val);
-                    //setSelecteedButton(val):
-                  }),
-            ),
-            Align(
-              alignment: Alignment(-0.9, -0.25),
-              child: RadioListTile(
-                value: 2,
-                groupValue: selectedRadio,
-                activeColor: Colors.deepPurple,
-                title: Text("Forever"),
-                onChanged: (val) {
-                  print(val);
-                  setSelectedRadio(val);
-                },
-              ),
-            ),
-            Align(
-                alignment: Alignment(-0.8, -0.15),
-                child: Text('Ask for Permission?', style: switchButton)),
-            Align(
-              alignment: Alignment(-0.9, -0.07),
-              child: RadioListTile(
-                  value: 3,
-                  groupValue: selectedRadio2,
-                  activeColor: Colors.deepPurple,
-                  title: Text("No"),
-                  onChanged: (val1) {
-                    print(val1);
-                    setSelectedRadio2(val1);
-                    //setSelecteedButton(val):
-                  }),
-            ),
-            Align(
-              alignment: Alignment(-0.9, 0),
-              child: RadioListTile(
-                value: 4,
-                groupValue: selectedRadio2,
-                activeColor: Colors.deepPurple,
-                title: Text("Yes"),
-                onChanged: (val1) {
-                  print(val1);
-                  setSelectedRadio2(val1);
-                },
+                      )),
+
+                  
+
+                  // * Radio buttons and their titles, permission time period/permission to use
+                  Container(
+                    alignment: Alignment.centerLeft,
+
+                    child: Column(
+                      children: [
+                        
+                      Text('Permission:', style: switchButton),
+
+                      RadioListTile(
+                          value: 1,
+                          groupValue: selectedRadio,
+                          activeColor: Colors.deepPurple,
+                          title: Text("Once"),
+                          onChanged: (val) {
+                            print(val);
+                            setSelectedRadio(val);
+                            //setSelecteedButton(val):
+                          }),
+
+                      RadioListTile(
+                        value: 2,
+                        groupValue: selectedRadio,
+                        activeColor: Colors.deepPurple,
+                        title: Text("Forever"),
+                        onChanged: (val) {
+                          print(val);
+                          setSelectedRadio(val);
+                        },
+                      ),
+
+                      Text('Ask for Permission?', style: switchButton),
+                      RadioListTile(
+                          value: 3,
+                          groupValue: selectedRadio2,
+                          activeColor: Colors.deepPurple,
+                          title: Text("No"),
+                          onChanged: (val1) {
+                            print(val1);
+                            setSelectedRadio2(val1);
+                          }),
+
+                      RadioListTile(
+                        value: 4,
+                        groupValue: selectedRadio2,
+                        activeColor: Colors.deepPurple,
+                        title: Text("Yes"),
+                        onChanged: (val1) {
+                          print(val1);
+                          setSelectedRadio2(val1);
+                    },
+                  ),
+                       ], ),
+                  ),
+                  IconButton(
+                      icon: Icon(Icons.add),
+                      iconSize: 65,
+                      onPressed: () {
+                        print("Added");
+                      }),
+                ],
               ),
             ),
           ],
         ),
-      )),
+      ),
     );
   }
 }

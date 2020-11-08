@@ -31,3 +31,10 @@ TextStyle switchButton = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight. w700,
 );
+TextStyle currentStatusStyle = TextStyle(
+    fontSize: 20,
+    fontFamily: 'Roboto',
+    color: Colors.black,
+    fontWeight: FontWeight.w900,
+    fontStyle: FontStyle.normal
+);
