@@ -42,6 +42,7 @@ homePage(BuildContext context) {
           margin:EdgeInsets.only(top:30, left: 15, right: 15),
           decoration: BoxDecoration (
             border: Border.all(color: Colors.black87),
+            borderRadius: BorderRadius.all(Radius.circular(30))
             ),
           child: Column(
             children:[ 

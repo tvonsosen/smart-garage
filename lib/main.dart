@@ -174,18 +174,29 @@ class _SharePageState extends State<SharePage> {
                       margin: EdgeInsets.only(top: 15),
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.black87),
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
                       ),
                       child: Column(children: [
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            IconButton(
+                                icon: Icon(Icons.edit),
+                                iconSize: 35,
+                                color: Colors.white,
+                                onPressed: () {
+                                  editEmails();
+                                },
+                                ),
                             Text('Shared with:', style: addButton),
                             IconButton(
                                 icon: Icon(Icons.edit),
                                 iconSize: 35,
                                 onPressed: () {
                                   editEmails();
-                                })],),
+                                })
+                          ],
+                        ),
                         shareLog()
                       ]))
                 ],

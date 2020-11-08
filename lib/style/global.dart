@@ -20,10 +20,11 @@ TextStyle garageButton = TextStyle(
     fontWeight: FontWeight.w900,
     fontStyle: FontStyle.normal);
 TextStyle addButton = TextStyle(
-  fontSize: 30,
+  fontSize: 33,
   fontFamily: 'Roboto',
   color: Colors.black,
-  fontWeight: FontWeight. w900,
+  fontWeight: FontWeight.w900,
+  
 );
 TextStyle switchButton = TextStyle(
   fontSize: 30,
