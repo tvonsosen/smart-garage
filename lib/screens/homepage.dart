@@ -26,6 +26,7 @@ homePage(BuildContext context) {
                   changeGarageStatus();
                 }),
           ),
+          // * share button to navigate to share page
           Align(
             alignment: Alignment(0.925, -0.875),
             child: IconButton(

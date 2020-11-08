@@ -25,3 +25,9 @@ TextStyle addButton = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight. w900,
 );
+TextStyle switchButton = TextStyle(
+  fontSize: 30,
+  fontFamily: 'Roboto',
+  color: Colors.black,
+  fontWeight: FontWeight. w700,
+);
