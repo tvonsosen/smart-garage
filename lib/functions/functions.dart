@@ -13,3 +13,13 @@ buttonStatus() {
 changeGarageStatus() async {
   print('changing status');
 }
+
+addEmail() {
+  //! for add button
+  print("added");
+}
+
+editEmails() {
+  // ! to edit the email list
+  print('edited');
+}

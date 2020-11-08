@@ -5,6 +5,7 @@ import 'package:smart_garage/screens/sharepage.dart';
 import 'package:smart_garage/style/global.dart';
 import 'package:smart_garage/functions/functions.dart';
 import 'package:smart_garage/style/pieces.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -75,7 +76,6 @@ class _SharePageState extends State<SharePage> {
         child: Column(
           children: <Widget>[
             Container(
-              
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -86,8 +86,8 @@ class _SharePageState extends State<SharePage> {
                         Navigator.pop(context);
                       }),
                   Container(
-                    margin: EdgeInsets.only(left: 30, right: 30),
-                    child: Text('Garage', style: garageTitle)),
+                      margin: EdgeInsets.only(left: 30, right: 30),
+                      child: Text('Garage', style: garageTitle)),
                   IconButton(
                       icon: Icon(Icons.arrow_back_ios_sharp),
                       color: Colors.white,
@@ -114,28 +114,22 @@ class _SharePageState extends State<SharePage> {
                         border: OutlineInputBorder(),
                       )),
 
-                  
-
                   // * Radio buttons and their titles, permission time period/permission to use
                   Container(
                     alignment: Alignment.centerLeft,
-
                     child: Column(
                       children: [
-                        
                         Text('Permission:', style: switchButton),
-
                         RadioListTile(
                             value: 1,
                             groupValue: selectedRadio,
                             activeColor: Colors.deepPurple,
-                            title: Text("Once"),
+                            title: Text("24 hours"),
                             onChanged: (val) {
                               print(val);
                               setSelectedRadio(val);
                               //setSelecteedButton(val):
                             }),
-
                         RadioListTile(
                           value: 2,
                           groupValue: selectedRadio,
@@ -146,7 +140,6 @@ class _SharePageState extends State<SharePage> {
                             setSelectedRadio(val);
                           },
                         ),
-
                         Text('Ask for Permission?', style: switchButton),
                         RadioListTile(
                             value: 3,
@@ -157,7 +150,6 @@ class _SharePageState extends State<SharePage> {
                               print(val1);
                               setSelectedRadio2(val1);
                             }),
-
                         RadioListTile(
                           value: 4,
                           groupValue: selectedRadio2,
@@ -166,29 +158,36 @@ class _SharePageState extends State<SharePage> {
                           onChanged: (val1) {
                             print(val1);
                             setSelectedRadio2(val1);
-                    },
-                  ),
-                       ], ),
+                          },
+                        ),
+                      ],
+                    ),
                   ),
                   IconButton(
                       icon: Icon(Icons.add),
                       iconSize: 65,
                       onPressed: () {
-                        print("Added");
+                        addEmail();
                       }),
                   Container(
-                    height: 275,
-                    margin:EdgeInsets.only(top:15),
-                    decoration: BoxDecoration (
-                      border: Border.all(color: Colors.black87),
+                      height: 275,
+                      margin: EdgeInsets.only(top: 15),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black87),
                       ),
-                    child: Column(
-                      children:[ 
-                        Text('Shared with:', style: addButton),
+                      child: Column(children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('Shared with:', style: addButton),
+                            IconButton(
+                                icon: Icon(Icons.edit),
+                                iconSize: 35,
+                                onPressed: () {
+                                  editEmails();
+                                })],),
                         shareLog()
-                      ]
-                    )
-                  )
+                      ]))
                 ],
               ),
             ),
