@@ -23,3 +23,8 @@ editEmails() {
   // ! to edit the email list
   print('edited');
 }
+
+setup() {
+  // ! for users with no garage setup button
+  print('setup');
+}

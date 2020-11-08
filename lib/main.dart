@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 import 'package:smart_garage/screens/homepage.dart';
+import 'package:smart_garage/screens/homepagenotsetup.dart';
 import 'package:smart_garage/style/global.dart';
 import 'package:smart_garage/functions/functions.dart';
 import 'package:smart_garage/style/pieces.dart';
@@ -36,6 +37,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(body: homePage(context));
+  }
+}
+
+class MyHomePageNotSet extends StatefulWidget {
+  MyHomePageNotSet({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _MyHomePageNotSetState createState() => _MyHomePageNotSetState();
+}
+
+class _MyHomePageNotSetState extends State<MyHomePageNotSet> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: homePageNotSet(context));
   }
 }
 
